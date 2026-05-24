@@ -1,3 +1,14 @@
+:root {
+    --primary: #8b0000;
+    --background: #f9f6f0;
+    --text: #1a1a1a;
+    --text-light: #888;
+    --border: #ddd;
+    --font-main: Georgia, serif;
+    --font-alt: Arial, sans-serif;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,9 +16,9 @@
 }
 
 body {
-    background-color: #f9f6f0;
-    font-family:Georgia, serif;
-    color: #1a1a1a;
+    background-color: var(--background);
+    font-family: var(--font-main);
+    color: var(--text);
 }
 
 body::-webkit-scrollbar {
@@ -19,8 +30,8 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    border-bottom: 1px solid #ddd;
-    background-color: #f9f6f0;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--background);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -33,21 +44,21 @@ body::-webkit-scrollbar {
 
 .nav-left a {
     text-decoration: none;
-    color: #1a1a1a;
+    color: var(--text);
     font-size: 13px;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .nav-left a:hover {
-    color: #8b0000;
+    color: var(--primary);
 }
 
 .logo {
     font-size: 22px;
     font-weight: bold;
     letter-spacing: 3px;
-    color: #1a1a1a;
+    color: var(--text);
 }
 
 .nav-right {
@@ -58,13 +69,13 @@ body::-webkit-scrollbar {
 
 .nav-right a{
     text-decoration: none;
-    color: #1a1a1a;
+    color: var(--text);
     font-size: 13px;
 }
 
 .sub-btn {
-    background-color: #1a1a1a;
-    color: #f9f6f0;
+    background-color: var(--text);
+    color: var(--background);
     border: none;
     padding: 8px 18px;
     font-size: 13px;
@@ -74,20 +85,20 @@ body::-webkit-scrollbar {
 }
 
 .sub-btn:hover {
-    background-color: #8b0000;
+    background-color: var(--primary);
 }
 
 .page-heading {
     text-align: center;
     padding: 40px 20px 20px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border);
 }
 
 .category-label {
     font-size: 13px;
     letter-spacing: 3px;
-    color: #8b0000;
-    font-family: Arial, sans-serif;
+    color: var(--primary);
+    font-family: var(--font-alt);
 }
 
 /* CARDS */
@@ -131,8 +142,8 @@ body::-webkit-scrollbar {
 .card-category {
     font-size: 11px;
     letter-spacing: 2px;
-    color: #8b0000;
-    font-family: Arial, sans-serif;
+    color: var(--primary);
+    font-family: var(--font-alt);
     margin-bottom: 8px;
 }
 
@@ -154,17 +165,17 @@ body::-webkit-scrollbar {
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #888;
-    font-family: Arial, sans-serif;
+    color: var(--text-light);
+    font-family: var(--font-alt);
 }
 
 .footer {
     text-align: center;
     padding: 30px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--border);
     font-size: 13px;
-    color: #888;
-    font-family: Arial, sans-serif;
+    color: var(--text-light);
+    font-family: var(--font-alt);
     margin-top: 40px;
 }
 
@@ -202,8 +213,8 @@ body::-webkit-scrollbar {
 .article-category {
     font-size: 11px;
     letter-spacing: 3px;
-    color: #8b0000;
-    font-family: Arial, sans-serif;
+    color: var(--primary);
+    font-family: var(--font-alt);
     margin-bottom: 15px;
 }
 
@@ -218,21 +229,21 @@ body::-webkit-scrollbar {
 .article-author {
     font-size: 12px;
     letter-spacing: 2px;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-alt);
     margin-bottom: 8px;
 }
 
 .article-date {
     font-size: 13px;
-    color: #888;
-    font-family: Arial, sans-serif;
+    color: var(--text-light);
+    font-family: var(--font-alt);
     margin-bottom: 30px;
 }
 
 .divider {
     width: 60px;
     height: 1px;
-    background-color: #8b0000;
+    background-color: var(--primary);
     margin: 0 auto;
 }
 
@@ -247,7 +258,7 @@ body::-webkit-scrollbar {
     font-size: 18px;
     line-height: 1.9;
     margin-bottom: 25px;
-    color: #1a1a1a;
+    color: var(--text);
 }
 
 /* DROP CAP - big first letter! */
@@ -257,6 +268,75 @@ body::-webkit-scrollbar {
     line-height: 0.8;
     margin-right: 10px;
     margin-top: 5px;
-    color: #8b0000;
+    color: var(--primary);
     font-weight: bold;
+}
+
+/* ================================
+   RESPONSIVE - TABLET (768px)
+   ================================ */
+@media (max-width: 768px) {
+
+    /* NAVBAR - hide links, show only logo */
+    .nav-left {
+        display: none; /* hide nav links */
+    }
+
+    .navbar {
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    /* CARDS - 2 per row on tablet */
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+        gap: 20px;
+    }
+}
+
+/* ================================
+   RESPONSIVE - MOBILE (480px)
+   ================================ */
+@media (max-width: 480px) {
+
+    /* NAVBAR */
+    .nav-left {
+        display: none;
+    }
+
+    .nav-right a {
+        display: none; /* hide sign in on mobile */
+    }
+
+    .logo {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    /* CARDS - 1 per row on mobile */
+    .cards-container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    /* CARD IMAGE - shorter on mobile */
+    .card-image {
+        height: 200px;
+    }
+
+    /* CATEGORY LABEL */
+    .page-heading {
+        padding: 20px;
+    }
+
+    .nav-bar {
+        border-bottom: 1px solid var(--border);
+    }
 }
