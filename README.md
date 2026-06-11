@@ -12,6 +12,6 @@ Interactive fiction blog with dynamic book cards. Built with HTML, CSS, and vani
 
 
 ## About this website
--- Its inspired from "The NewYorker" news web page. 
--- Here you can see review and get preview of fiction books.
+- Its inspired from "The NewYorker" news web page. 
+- Here you can see review and get preview of fiction books.
 
