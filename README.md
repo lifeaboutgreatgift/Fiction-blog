@@ -1,0 +1,1 @@
+"Interactive fiction blog with dynamic book cards. Built with HTML, CSS, and vanilla JavaScript."
