@@ -2,7 +2,7 @@
 
 An elegant, high-end digital literary magazine platform inspired by *The New Yorker*. This platform features dynamic data hydration, isolated content hubs for fiction and poetry, glassmorphism hero banner components, and secure data handling systems built from scratch.
 
-✨ **[Live Production Deployment](https://github.io)**
+✨ **Live Production Deployment**:https://github.io
 
 ---
 
