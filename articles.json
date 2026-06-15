@@ -1,6 +1,7 @@
 [
   {
     "id": "pride-and-prejudice",
+    "type": "book",
     "image": "images/pride-and-prejudice.jpg",
     "category": "CLASSIC FICTION",
     "title": "\"Pride and Prejudice\"",
@@ -16,6 +17,7 @@
   },
   {
     "id": "jane-eyre",
+    "type": "book",
     "image": "images/jane-eyre.jpg",
     "category": "CLASSIC FICTION",
     "title": "\"Jane Eyre\"",
@@ -29,6 +31,7 @@
   },
   {
     "id": "wuthering-heights",
+    "type": "book",
     "image": "images/wuthering-heights.jpg",
     "category": "CLASSIC FICTION",
     "title": "\"Wuthering Heights\"",
@@ -42,6 +45,7 @@
   },
   {
     "id": "the-great-gatsby",
+    "type": "book",
     "image": "images/the-great-gatsby.jpg",
     "category": "CLASSIC FICTION",
     "title": "\"The Great Gatsby\"",
