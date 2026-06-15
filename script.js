@@ -12,7 +12,7 @@ function renderGridCards(itemsList) {
         link.classList.add('card-link');
 
         // Route dynamically based on content type
-        if (item.type === 'poetry') {
+        if (item.type === 'poem') {
             link.href = `poetry.html?id=${item.id}`;
         } else {
             link.href = `article.html?id=${item.id}`;

@@ -67,7 +67,7 @@ fetch('articles.json')
         const masterDataset = [...jsonItems, ...localReviews];
 
         // ⚡ THE IMPORTANT FILTER: Keep only elements tagged as poetry
-        const poetryOnlyList = masterDataset.filter(item => item.type === 'poetry');
+        const poetryOnlyList = masterDataset.filter(item => item.type === 'poem');
 
         // Fire rendering loop grid matching your visual theme constraints
         renderPoetryCards(poetryOnlyList);

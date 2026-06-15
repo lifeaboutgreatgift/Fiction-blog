@@ -57,5 +57,108 @@
       "\"Whenever you feel like criticizing any one,\" he told me, \"just remember that all the people in this world haven’t had the advantages that you’ve had.\"",
       "He didn’t say any more, but we’ve always been unusually communicative in a reserved way, and I understood that he meant a great deal more than that."
     ]
-  }
+  },
+  {
+    "id": "the-road-not-taken",
+    "type": "poem",
+    "image": "images/road-not-taken.jpg",
+    "category": "NATURE & REFLECTION",
+    "title": "\"The Road Not Taken\"",
+    "author": "By Robert Frost",
+    "desc": "A contemplative poem about choices, paths, and the roads we take in life.",
+    "date": "1916",
+    "paragraphs": [
+        "Two roads diverged in a yellow wood, and sorry I could not travel both and be one traveler, long I stood and looked down one as far as I could to where it bent in the undergrowth.",
+        "Then took the other, as just as fair, and having perhaps the better claim, because it was grassy and wanted wear; though as for that the passing there had worn them really about the same.",
+        "And both that morning equally lay in leaves no step had trodden black. Oh, I kept the first for another day! Yet knowing how way leads on to way, I doubted if I should ever come back."
+    ]
+},
+{
+    "id": "if-",
+    "type": "poem",
+    "image": "images/if.jpg",
+    "category": "INSPIRATIONAL VERSE",
+    "title": "\"If—\"",
+    "author": "By Rudyard Kipling",
+    "desc": "A father's advice to his son on virtue, resilience, and what it means to be a complete person.",
+    "date": "1910",
+    "paragraphs": [
+        "If you can keep your head when all about you are losing theirs and blaming it on you; if you can trust yourself when all men doubt you, but make allowance for their doubting too.",
+        "If you can wait and not be tired by waiting, or being lied about, do not deal in lies, or being hated, do not give way to hating, and yet do not look too good, nor talk too wise."
+    ]
+},
+{
+    "id": "daffodils",
+    "type": "poem",
+    "image": "images/Daffodils.jpg",
+    "category": "ROMANTIC POETRY",
+    "title": "\"I Wandered Lonely as a Cloud\"",
+    "author": "By William Wordsworth",
+    "desc": "Also known as 'Daffodils', a celebration of nature's beauty and its lasting impact on memory.",
+    "date": "1807",
+    "paragraphs": [
+        "I wandered lonely as a cloud that floats on high o'er vales and hills, when all at once I saw a crowd, a host, of golden daffodils, beside the lake, beneath the trees, fluttering and dancing in the breeze.",
+        "Continuous as the stars that shine and twinkle on the milky way, they stretched in never-ending line along the margin of a bay: ten thousand saw I at a glance, tossing their heads in sprightly dance."
+    ]
+},
+{
+    "id": "a-lecture-upon-the-shadow",
+    "type": "poem",
+    "image": "images/lecture-shadow.jpg",
+    "category": "METAPHYSICAL POETRY",
+    "title": "\"A Lecture upon the Shadow\"",
+    "author": "By John Donne",
+    "desc": "A metaphysical meditation using the imagery of shadows to explore the growth and decline of love.",
+    "date": "1633",
+    "paragraphs": [
+        "Stand still, and I will read to thee a lecture, love, in love's philosophy. These three hours that we have spent, walking here, two shadows went along with us, which we ourselves produc'd.",
+        "But, now the sun is just above our head, we do those shadows tread, and to brave clearness all things are reduc'd. So whilst our infant loves did grow, disguises did, and shadows, flow from us, and our cares; but now 'tis not so.",
+        "That love hath not attain'd the highest degree, which is still diligent, lest others see. Except our loves at this noon stay, we shall new shadows make the other way. As the first were made to blind others, these which come behind will work upon ourselves, and blind our eyes."
+    ]
+},
+{
+    "id": "trees",
+    "type": "poem",
+    "image": "images/trees-dickinson.jpg",
+    "category": "NATURE & REFLECTION",
+    "title": "\"Trees\"",
+    "author": "By Emily Dickinson",
+    "desc": "A short, quiet observation on the gentle character of trees as fellow inhabitants of the earth.",
+    "date": "circa 1859",
+    "paragraphs": [
+        "The Trees like Tassels — hit — and swung — There seemed to rise a Tune From Miniature Creatures Accompanying the Sun —",
+        "Far Childhood — a-coquette beguiled By a Vermilion Reflector — Yet here's the Branch as One refers To Eyes that we'd opened never — "
+    ]
+},
+{
+    "id": "the-tyger-blake",
+    "type": "poem",
+    "image": "images/the-tyger.jpg",
+    "category": "ROMANTIC POETRY",
+    "title": "\"The Tyger\"",
+    "author": "By William Blake",
+    "desc": "From Songs of Experience — a series of unanswered questions probing creation, beauty, and terror.",
+    "date": "1794",
+    "paragraphs": [
+        "Tyger Tyger, burning bright, in the forests of the night; what immortal hand or eye, could frame thy fearful symmetry?",
+        "In what distant deeps or skies burnt the fire of thine eyes? On what wings dare he aspire? What the hand, dare seize the fire?",
+        "When the stars threw down their spears, and water'd heaven with their tears, did he smile his work to see? Did he who made the Lamb make thee?"
+    ]
+},
+{
+    "id": "the-wild-swans-at-coole",
+    "type": "poem",
+    "image": "images/the-wild-swans-coole.jpg",
+    "category": "MODERN POETRY",
+    "title": "\"The Wild Swans at Coole\"",
+    "author": "By W.B. Yeats",
+    "desc": "A reflective poem on aging, change, and the enduring beauty of nature contrasted with the poet's own mortality.",
+    "date": "1917",
+    "paragraphs": [
+        "The trees are in their autumn beauty, the woodland paths are dry, under the October twilight the water mirrors a still sky; upon the brimming water among the stones are nine-and-fifty swans.",
+        "The nineteenth autumn has come upon me since I first made my count; I saw, before I had well finished, all suddenly mount and scatter wheeling in great broken rings upon their clamorous wings.",
+        "Unwearied still, lover by lover, they paddle in the cold companionable streams or climb the air; their hearts have not grown old; passion or conquest, wander where they will, attend upon them still."
+    ]
+}
+
 ]
