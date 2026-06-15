@@ -5,7 +5,7 @@ HTML, CSS, and JavaScript. Features JSON-driven content,
 client-side data persistence, and a responsive design 
 inspired by editorial magazine layouts.
 
-🔗 **Live site**: [link]
+🔗 **Live site**: [https://lifeaboutgreatgift.github.io/Fiction-blog/](https://lifeaboutgreatgift.github.io/Fiction-blog/)
 
 ## Features
 
@@ -27,14 +27,14 @@ inspired by editorial magazine layouts.
 User submissions via the review form are saved to 
 `localStorage` and merged with the JSON data on load:
 
-\`\`\`javascript
+````javascript
 const localReviews = JSON.parse(localStorage.getItem('userReviews')) || [];
 const masterDataset = [...jsonBooks, ...localReviews];
-\`\`\`
+````
 
 ## Project Structure
 
-\`\`\`
+````
 ├── index.html          # Fiction homepage
 ├── poetry-home.html     # Poetry homepage  
 ├── reviews.html          # Submission form
@@ -43,16 +43,16 @@ const masterDataset = [...jsonBooks, ...localReviews];
 ├── script.js             # Homepage logic
 ├── article-loader.js    # Article page logic
 └── style.css             # Styles
-\`\`\`
+````
 
 ## Running locally
 
-\`\`\`bash
+````bash
 git clone https://github.com/lifeaboutgreatgift/Fiction-blog.git
 cd Fiction-blog
-\`\`\`
+````
 
 Open with VS Code Live Server (required for fetch() to work!)
 
 ---
-Built by Afroj as part of a web development learning journey.
+Built by **Afroj** as part of a web development learning journey.
