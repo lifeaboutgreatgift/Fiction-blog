@@ -81,7 +81,7 @@ const masterDataset = [...jsonBooks, ...localReviews];
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com
+   git clone https://github.com/lifeaboutgreatgift/Fiction-blog.git
    ```
 2. **Navigate into the workspace**:
    ```bash
@@ -91,4 +91,4 @@ const masterDataset = [...jsonBooks, ...localReviews];
    Open `index.html` inside any modern web browser or run it with VS Code's **Live Server** extension to begin browsing!
 
 ---
-*Designed with passion for premium web typography and clean software patterns. Built by [Afroj/lifeaboutgreatgift] © 2026.*
+*Designed with passion for premium web typography and clean software patterns. Built by **Afroj**(@lifeaboutgreatgift) © 2026.*
