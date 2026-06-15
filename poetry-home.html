@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry Collection - The Fiction Review</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="nav-link">Fiction</a>
+            <a href="poetry-home.html" class="nav-link active">Poetry</a>
+            <a href="review.html">Reviews</a>
+        </div>
+        <button class="hamburger-toggle" id="menu-open-btn">&#9776;</button>
+        <div class="logo">THE FICTION REVIEW</div>
+        <div class="nav-right">
+            <button class="sub-btn">Subscribe</button>
+        </div>
+    </div>
+
+    <!-- Page Main Header Title -->
+    <div class="page-heading">
+        <p class="category-label">VERSE & STANZA</p>
+    </div>
+
+    <!-- Grid Container Box for Poetry Cards Only -->
+    <div class="cards-container" id="cards-container">
+        <!-- Poetry cards will be injected here securely by javascript -->
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2026 The Fiction Review. All Rights Reserved.</p>
+    </div>
+
+    <div class="mobile-nav-overlay" id="mobile-menu">
+        <div class="mobile-nav-content">
+            <span class="mobile-nav-close" id="menu-close-btn">&times;</span>
+            
+            <div class="mobile-links">
+                <a href="index.html" class="mobile-link">Fiction</a>
+                <a href="poetry-home.html" class="mobile-link">Poetry</a>
+                <a href="review.html" class="mobile-link">Reviews</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Specialized Poetry Grid Script Connection -->
+    <script src="poetry-home-loader.js"></script>
+    <script src="global-nav.js"></script>
+</body>
+</html>
