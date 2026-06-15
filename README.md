@@ -91,4 +91,4 @@ const masterDataset = [...jsonBooks, ...localReviews];
    Open `index.html` inside any modern web browser or run it with VS Code's **Live Server** extension to begin browsing!
 
 ---
-*Designed with passion for premium web typography and clean software patterns. Built by [Your Name/Username] © 2026.*
+*Designed with passion for premium web typography and clean software patterns. Built by [Afroj/lifeaboutgreatgift] © 2026.*
