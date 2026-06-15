@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Review - The Fiction Review</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+        </div>
+
+         <!-- ⚡ ADDED: The missing hamburger button for mobile -->
+        <button class="hamburger-toggle" id="menu-open-btn">&#9776;</button>
+        <div class="logo">THE FICTION REVIEW</div>
+        <div class="nav-right">
+            <button class="sub-btn">Subscribe</button>
+        </div>
+    </div>
+
+    <!-- Form Container Area -->
+    <div class="form-container">
+        <h1 class="form-title">Submit a Literary Review</h1>
+        <p class="form-subtitle">Share your perspective on classic or modern literature.</p>
+        
+        <form id="review-form">
+            <div class="form-group">
+                <label for="review-type">Content Type</label>
+                <select id="review-type" required>
+                    <option value="book">Classic Fiction (Book)</option>
+                    <option value="poetry">Poetry Piece</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="review-title">Work Title</label>
+                <input type="text" id="review-title" placeholder="e.g., Moby Dick" required>
+            </div>
+
+            <div class="form-group">
+                <label for="review-author">Author / Poet Name</label>
+                <input type="text" id="review-author" placeholder="e.g., By Herman Melville" required>
+            </div>
+
+            <div class="form-group">
+                <label for="review-category">Genre Category</label>
+                <input type="text" id="review-category" placeholder="e.g., NAUTICAL FICTION" required>
+            </div>
+
+            <div class="form-group">
+                <label for="review-image">Cover Image Link (URL or local path)</label>
+                <input type="text" id="review-image" placeholder="images/custom-cover.jpg" required>
+            </div>
+
+            <div class="form-group">
+                <label for="review-desc">Brief Summary Description</label>
+                <input type="text" id="review-desc" placeholder="A brief one-sentence hook for the card grid..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="review-content">Full Review Text (Separate paragraphs with new lines)</label>
+                <textarea id="review-content" rows="8" placeholder="Type your full multi-paragraph review here..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-review-btn">Publish Entry</button>
+        </form>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2026 The Fiction Review. All Rights Reserved.</p>
+    </div>
+
+     <!-- Full-Screen Mobile Drawer Container Panel Layout -->
+    <div class="mobile-nav-overlay" id="mobile-menu">
+        <div class="mobile-nav-content">
+            <!-- Close Button Cross Icon Symbol -->
+            <span class="mobile-nav-close" id="menu-close-btn">&times;</span>
+            
+            <!-- Mobile Links Menu Box -->
+            <div class="mobile-links">
+                <a href="index.html" class="mobile-link">Fiction</a>
+                <a href="poetry-home.html" class="mobile-link">Poetry</a>
+                <a href="review.html" class="mobile-link">Reviews</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Processing Script Connection -->
+    <script src="review-handler.js"></script>
+
+    <script src="global-nav.js"></script> 
+</body>
+</html>
