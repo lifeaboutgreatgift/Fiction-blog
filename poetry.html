@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry Reading - The Fiction Review</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="review.html">Reviews</a>
+        </div>
+
+         <!-- ⚡ ADDED: The missing hamburger button for mobile -->
+        <button class="hamburger-toggle" id="menu-open-btn">&#9776;</button>
+        <div class="logo">THE FICTION REVIEW</div>
+        <div class="nav-right">
+            <button class="sub-btn">Subscribe</button>
+        </div>
+    </div>
+
+    <!-- Blur Glass Hero Banner -->
+    <div class="hero-image">
+        <img id="poem-img" src="" alt="">
+    </div>
+
+    <!-- Poem Metadata Header -->
+    <div class="article-header">
+        <p id="poem-category" class="article-category"></p>
+        <h1 id="poem-title" class="article-title"></h1>
+        <p id="poem-poet" class="article-author"></p>
+        <p id="poem-date" class="article-date"></p>
+        <div class="divider"></div>
+    </div>
+
+    <!-- Centered Poem Body Container -->
+    <div class="poem-body-container">
+        <div id="poem-verses-wrapper"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2026 The Fiction Review. All Rights Reserved.</p>
+    </div>
+
+     <!-- Full-Screen Mobile Drawer Container Panel Layout -->
+    <div class="mobile-nav-overlay" id="mobile-menu">
+        <div class="mobile-nav-content">
+            <!-- Close Button Cross Icon Symbol -->
+            <span class="mobile-nav-close" id="menu-close-btn">&times;</span>
+            
+            <!-- Mobile Links Menu Box -->
+            <div class="mobile-links">
+                <a href="index.html" class="mobile-link">Fiction</a>
+                <a href="poetry-home.html" class="mobile-link">Poetry</a>
+                <a href="review.html" class="mobile-link">Reviews</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dynamic Poetry Loader Script -->
+    <script src="poetry-loader.js"></script>
+
+    <script src="global-nav.js"></script> 
+</body>
+</html>
