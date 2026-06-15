@@ -11,11 +11,14 @@
         <!-- NAVBAR -->
         <nav class="navbar">
             <div class="nav-left">
-                <a href="#">Home</a>
+                <a href="index.html">Home</a>  <!--we just put simply index.html file in nav home, then we click on home it will open to index html file.-->
                 <a href="#">Fiction</a>
                 <a href="#">Poetry</a>
-                <a href="#">Reviews</a>
+                <a href="review.html">Reviews</a>
             </div>
+
+             <!-- ⚡ ADDED: The missing hamburger button for mobile -->
+            <button class="hamburger-toggle" id="menu-open-btn">&#9776;</button>
             <div class="logo">THE FICTION REVIEW</div>
             <div class="nav-right">
                 <a href="#">Sign In</a>
@@ -45,6 +48,25 @@
         <footer class="footer">
             <p>© 2026 The Fiction Review. All rights reserved.</p>
         </footer>
+
+         <!-- Full-Screen Mobile Drawer Container Panel Layout -->
+    <div class="mobile-nav-overlay" id="mobile-menu">
+        <div class="mobile-nav-content">
+            <!-- Close Button Cross Icon Symbol -->
+            <span class="mobile-nav-close" id="menu-close-btn">&times;</span>
+            
+            <!-- Mobile Links Menu Box -->
+            <div class="mobile-links">
+                <a href="index.html" class="mobile-link">Fiction</a>
+                <a href="poetry-home.html" class="mobile-link">Poetry</a>
+                <a href="review.html" class="mobile-link">Reviews</a>
+            </div>
+        </div>
+    </div>
+
+        <script src="article-loader.js"></script>
+
+        <script src="global-nav.js"></script> 
 
     </body>
 </html>
