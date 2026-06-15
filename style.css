@@ -191,13 +191,53 @@ body::-webkit-scrollbar {
 /* HERO IMAGE */
 .hero-image {
     width: 100%;
-    height: 500px;
+    max-height: 500px;
+    position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* Configures the background image to fill the layout space */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* The Glass Blur Layer - Blurs whichever book cover is behind it */
+.hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Darkens the background slightly so the center book cover pops */
+    background: rgba(0, 0, 0, 0.15); 
+    -webkit-backdrop-filter: blur(30px) saturate(130%);
+    backdrop-filter: blur(30px) saturate(130%);
+    z-index: 1;
+}
+
+/* THE FRONT BOOK COVER - Stands out crisply over the glass effect */
+.hero-image img {
+    height: 85%;
+    width: auto;
+    max-width: 90%;
+    object-fit: contain;
+    position: relative;
+    z-index: 2; /* Pushes the crisp cover above the blur overlay */
+    
+    /* Sophisticated 3D book shadow */
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.35), 
+        0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
 
 .hero-image img {
-    width: 100%;
+    width: auto;
     height: 100%;
+    max-width: 100%;
     object-fit: cover;
     object-position: 10% 20%;
 }
@@ -273,6 +313,300 @@ body::-webkit-scrollbar {
 }
 
 /* ================================
+   POETRY SPECIFIC LAYOUT STYLING
+   ================================ */
+.poem-body-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 0 30px;
+    text-align: center; /* Centers poem text perfectly on screen */
+}
+
+.poem-line {
+    font-family: var(--font-main);
+    font-size: 20px;
+    font-style: italic;     /* Gives classic poem italic presentation */
+    line-height: 1.8;
+    margin-bottom: 20px;     /* Sets clean visual separation between stanzas */
+    color: #2c2c2c;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   USER REVIEWS FORM STYLING
+   ========================================================================== */
+
+/* Main layout wrapper centering the form card */
+.form-container {
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #ffffff; /* Crisp white card layout against paper background */
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); /* Extremely soft premium drop shadow */
+}
+
+.form-title {
+    font-family: var(--font-main);
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.form-subtitle {
+    font-family: var(--font-alt);
+    font-size: 14px;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Individual form field layouts */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-family: var(--font-alt);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+/* Interactive inputs, selectors, and textareas */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    font-family: var(--font-alt);
+    font-size: 14px;
+    padding: 12px 15px;
+    border: 1px solid var(--border);
+    background-color: var(--background); /* Inset tint matching page background */
+    color: var(--text);
+    transition: all 0.3s ease;
+    border-radius: 0; /* Keeps the classic geometric book layout style crisp */
+}
+
+/* Switches writing box typography back to serif formatting for full entries */
+.form-group textarea {
+    font-family: var(--font-main);
+    font-size: 16px;
+    line-height: 1.6;
+    resize: vertical; /* Allows height adjustment without breaking grid constraints */
+}
+
+/* Clean interactive highlight outlines */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary); /* Highlights matching your signature burgundy tone */
+    background-color: #ffffff;   /* Flashes back to clean white on editing */
+}
+
+/* Prominent publishing layout element */
+.submit-review-btn {
+    display: block;
+    width: 100%;
+    background-color: var(--text);
+    color: var(--background);
+    border: none;
+    padding: 15px;
+    font-family: var(--font-alt);
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 35px;
+}
+
+.submit-review-btn:hover {
+    background-color: var(--primary); /* Smooth fade into burgundy */
+    letter-spacing: 3px; /* Playful premium typographic widening on hover */
+}
+
+/* Responsive adjustment layer for mobile form frames */
+@media (max-width: 768px) {
+    .form-container {
+        margin: 30px 20px;
+        padding: 25px;
+    }
+    
+    .form-title {
+        font-size: 26px;
+    }
+}
+
+
+/* Underlines the active magazine tab or turns it to your signature burgundy */
+.nav-link.active {
+    color: var(--primary) !important;
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 4px;
+}
+
+
+/* ==========================================================================
+   MOBILE HAMBURGER LAYOUT ENGINE
+   ========================================================================== */
+
+/* Hide the toggle trigger button on desktop monitors by default */
+.hamburger-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+/* Full screen transparent curtain container layer */
+/* ==========================================================================
+   UPGRADED LUXURY EDITORIAL DRAWER STYLING
+   ========================================================================== */
+
+/* The Background Dimmer Curtain with Soft Glass Frosting */
+.mobile-nav-overlay {
+    position: fixed;
+    z-index: 99999;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(26, 26, 26, 0.4);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* The Animated Side Drawer Panel - Off-White Paper Texture Tint */
+.mobile-nav-content {
+    width: 300px;
+    max-width: 80%;
+    height: 100%;
+    background-color: #f6f3ea; /* Cream paper tone matching your brand */
+    padding: 60px 35px;
+    position: relative;
+    box-shadow: 20px 0 50px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* JavaScript Trigger Animation States */
+.mobile-nav-overlay.menu-active {
+    display: flex;
+    opacity: 1;
+}
+
+.mobile-nav-overlay.menu-active .mobile-nav-content {
+    transform: translateX(0);
+}
+
+/* Premium Close Cross Toggle Button Icon */
+.mobile-nav-close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 26px;
+    font-weight: 300;
+    cursor: pointer;
+    color: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-close:hover {
+    color: var(--primary);
+    transform: rotate(90deg);
+}
+
+/* Links Wrapper Column Box */
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+/* Editorial Links - Styled with Georgia Font */
+.mobile-link {
+    text-decoration: none;
+    color: var(--text);
+    font-family: var(--font-main) !important; /* Forces your beautiful Georgia Serif */
+    font-size: 24px !important; /* Makes titles larger and more impactful */
+    font-weight: bold;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08); /* Clean minimalist dividing hair-lines */
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Interactive Pointer Accent Arrow Indicator */
+.mobile-link::after {
+    content: '→';
+    font-size: 18px;
+    color: var(--text-light);
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: all 0.3s ease;
+}
+
+/* Hover and Tap Animation Settings */
+.mobile-link:hover {
+    color: var(--primary);
+    padding-left: 10px; /* Elegant nudge effect */
+}
+
+.mobile-link:hover::after {
+    opacity: 1;
+    color: var(--primary);
+    transform: translateX(0);
+}
+
+/* Branding Metadata Base Stamp Tag */
+.mobile-nav-content::after {
+    content: 'THE FICTION REVIEW • EST. 2026';
+    position: absolute;
+    bottom: 40px;
+    left: 35px;
+    font-family: var(--font-alt);
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--text-light);
+}
+
+
+/* Toggle element rules inside your media query breakpoint block */
+@media (max-width: 768px) {
+    .nav-left {
+        display: none !important; /* Forces desktop links off screen layout loops */
+    }
+    .hamburger-toggle {
+        display: block; /* Reveals menu control trigger icon onto tablet/mobile headers */
+    }
+}
+
+/* Slide-in transform engine framework */
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+
+/* ================================
    RESPONSIVE - TABLET (768px)
    ================================ */
 @media (max-width: 768px) {
@@ -304,6 +638,11 @@ body::-webkit-scrollbar {
    RESPONSIVE - MOBILE (480px)
    ================================ */
 @media (max-width: 480px) {
+
+    .hero-image{
+        max-height: 300px;
+    }
+
 
     /* NAVBAR */
     .nav-left {
