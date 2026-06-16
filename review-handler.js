@@ -1,4 +1,4 @@
-document.getElementById('review-form').addEventListener('submit', function(e) {
+document.getElementById('review-form').addEventListener('submit', async function(e) {
     e.preventDefault(); // Prevents the page from refreshing on submit
 
     // 1. Gather all data inputs from the form elements
@@ -11,10 +11,28 @@ document.getElementById('review-form').addEventListener('submit', function(e) {
     const contentRaw = document.getElementById('review-content').value.trim();
 
     // 2. Generate a URL-friendly dynamic ID string from the title (e.g., "The Hobbit" -> "the-hobbit")
-    const id = title
+    let baseId = title
         .toLowerCase()
         .replace(/[^a-z0-9\s-]/g, '') // Strips out special characters like quotes
-        .replace(/\s+/g, '-');        // Replaces empty spaces with hyphens
+        .replace(/\s+/g, '-');   // Replaces empty spaces with hyphens
+
+    //Fallback if the title slugifies to nothing (all symbols/emoji)
+    if (!baseId) {
+        baseId = `entry-${Date.now()}`;
+    }
+
+    //check both the original dataset and locally saved reviews
+    //so a new if can never collide with an existing one
+    const existingJson = await fetch('articles.json').then(res => res.json()).catch(() => []);
+    const existingLocal = JSON.parse(localStorage.getItem('userReviews')) || [];
+    const existingIds = new Set([...existingJson, ...existingLocal].map(item => item.id));
+
+    let id = baseId;
+    let counter = 2;
+    while (existingIds.has(id)) {
+        id = `${baseId}-${counter}`;
+        counter++;
+    }
 
     // 3. Process the raw text block into an array of clean paragraphs
     // Splits text wherever the user pressed "Enter" or "Return"

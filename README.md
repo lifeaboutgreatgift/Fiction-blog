@@ -37,7 +37,7 @@ const masterDataset = [...jsonBooks, ...localReviews];
 ````
 ├── index.html          # Fiction homepage
 ├── poetry-home.html     # Poetry homepage  
-├── reviews.html          # Submission form
+├── review.html          # Submission form
 ├── article.html          # Article template
 ├── articles.json        # Content data
 ├── script.js             # Homepage logic
